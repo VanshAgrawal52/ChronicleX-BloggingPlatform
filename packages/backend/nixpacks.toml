@@ -1,18 +1,20 @@
-# Railway/Nixpacks configuration for pnpm + Prisma + Fastify backend
-[variables]
-NODE_VERSION = "20"
+# Railway Nixpacks config (pnpm monorepo + Prisma + Fastify)
+# Forces Node provider and uses workspace-aware installs.
 
-[install]
-# Use pnpm; install at workspace root, then generate Prisma client in backend
+providers = ["node"]
+
+[phases.setup]
+nixPkgs = ["nodejs-20_x"]
+
+[phases.install]
 cmds = [
-  "set -e",
   "corepack enable",
   "corepack prepare pnpm@9.6.0 --activate",
-  "cd ../.. && pnpm install --frozen-lockfile && cd packages/backend",
+  "pnpm -w install --frozen-lockfile --filter @chroniclex/backend...",
   "pnpm prisma:generate"
 ]
 
-[build]
+[phases.build]
 cmds = [
   "pnpm build"
 ]
