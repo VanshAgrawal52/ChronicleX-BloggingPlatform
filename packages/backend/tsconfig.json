@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+  "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "./src",
+  "paths": {
+      "@config/*": ["config/*"],
+      "@modules/*": ["modules/*"],
+      "@common/*": ["common/*"],
+      "@lib/*": ["common/lib/*"],
+      "@prisma": ["../prisma/client"],
+      "@queue/*": ["modules/queue/*"]
+  },
+  "types": ["node","jest"]
+  },
+  "include": ["src","tests"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens & global tweaks */
+html { scroll-behavior: smooth; }
+body { @apply font-sans text-slate-800 bg-slate-50 dark:bg-slate-900 dark:text-slate-100 antialiased; }
+a { @apply underline-offset-2 decoration-transparent transition hover:decoration-brand-400; }
+::selection { @apply bg-brand-500 text-white; }
+
+/* Prose adjustments */
+.prose :where(code):not(:where(pre code)) { @apply bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-brand-600 dark:text-brand-300; }
+
+/* Utilities */
+.btn { @apply inline-flex items-center gap-2 rounded-md bg-brand-600 text-white px-4 py-2 text-sm font-medium shadow-soft hover:bg-brand-500 active:bg-brand-700 transition disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-outline { @apply btn bg-transparent border border-brand-500 text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800; }
+.card { @apply rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft; }
+.skeleton { @apply animate-pulse-soft bg-slate-200 dark:bg-slate-700 rounded; }

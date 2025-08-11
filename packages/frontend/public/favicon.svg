@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+	<title id="title">ChronicleX</title>
+	<desc id="desc">Favicon logo for ChronicleX: stylized open chronicle with an X</desc>
+	<defs>
+		<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#4F46E5"/>
+			<stop offset="100%" stop-color="#7C3AED"/>
+		</linearGradient>
+		<linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+			<stop offset="100%" stop-color="#EEF2FF"/>
+		</linearGradient>
+	</defs>
+	<rect width="64" height="64" rx="14" fill="url(#bg)"/>
+	<!-- Open book / chronicle shape -->
+	<path d="M16 18h14c2.2 0 4 .9 5 2.2 1-1.3 2.8-2.2 5-2.2h14v26c0 2.2-1.8 4-4 4H40c-2.2 0-4-.9-5-2.2-1 1.3-2.8 2.2-5 2.2H20c-2.2 0-4-1.8-4-4V18Z" fill="url(#page)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+	<!-- Center spine shadow -->
+	<rect x="31" y="19" width="2" height="24" rx="1" fill="#E0E7FF"/>
+	<!-- Decorative X (content + the X in ChronicleX) -->
+	<path d="M26 25l4.2 5.3L26 36h3.4l2.6-3.7 2.6 3.7H38l-4.1-5.7L38 25h-3.4l-2.6 3.6L29.4 25H26Z" fill="#4F46E5"/>
+	<!-- Glow accent -->
+	<circle cx="50" cy="14" r="6" fill="#818CF8" fill-opacity="0.25" />
+</svg>

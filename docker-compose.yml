@@ -1,0 +1,44 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: chroniclex
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+  backend:
+    build: ./packages/backend
+    command: pnpm dev
+    volumes:
+      - ./packages/backend:/app
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/chroniclex
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=supersecretjwt
+      - NODE_ENV=development
+    ports:
+      - '4000:4000'
+    depends_on:
+      - db
+      - redis
+  frontend:
+    build: ./packages/frontend
+    command: pnpm dev
+    volumes:
+      - ./packages/frontend:/app
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+volumes:
+  db_data: {}

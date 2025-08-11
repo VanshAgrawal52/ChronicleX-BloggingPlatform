@@ -1,0 +1,24 @@
+{
+  "name": "chroniclex-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/backend",
+    "packages/frontend"
+  ],
+  "scripts": {
+    "dev:backend": "pnpm --filter @chroniclex/backend dev",
+    "dev:frontend": "pnpm --filter @chroniclex/frontend dev",
+    "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.6.0"
+}
