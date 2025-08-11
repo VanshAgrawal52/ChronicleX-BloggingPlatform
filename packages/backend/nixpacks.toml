@@ -3,11 +3,12 @@
 NODE_VERSION = "20"
 
 [install]
-# Use pnpm and ensure prisma client is generated during install
+# Use pnpm; install at workspace root, then generate Prisma client in backend
 cmds = [
+  "set -e",
   "corepack enable",
   "corepack prepare pnpm@9.6.0 --activate",
-  "pnpm install --frozen-lockfile",
+  "cd ../.. && pnpm install --frozen-lockfile && cd packages/backend",
   "pnpm prisma:generate"
 ]
 
