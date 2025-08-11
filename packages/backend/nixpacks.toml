@@ -1,0 +1,20 @@
+# Railway/Nixpacks configuration for pnpm + Prisma + Fastify backend
+[variables]
+NODE_VERSION = "20"
+
+[install]
+# Use pnpm and ensure prisma client is generated during install
+cmds = [
+  "corepack enable",
+  "corepack prepare pnpm@9.6.0 --activate",
+  "pnpm install --frozen-lockfile",
+  "pnpm prisma:generate"
+]
+
+[build]
+cmds = [
+  "pnpm build"
+]
+
+[start]
+cmd = "pnpm start"
