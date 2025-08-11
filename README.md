@@ -8,11 +8,6 @@
   <strong style="font-size:2em;">ChronicleX Blogging Platform</strong>
 </p>
 
-<p align="center">
-  <a href="https://vercel.com/new/git/external?repository-url=https://github.com/VanshAgrawal52/ChronicleX-BloggingPlatform&project-name=chroniclex-bloggingplatform&repository-name=ChronicleX-BloggingPlatform">
-    <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
-  </a>
-</p>
 ## Made by
 
 Project by [VanshAgrawal52](https://github.com/VanshAgrawal52) (Vansh Agrawal)
@@ -22,19 +17,7 @@ Project by [VanshAgrawal52](https://github.com/VanshAgrawal52) (Vansh Agrawal)
   Features role-based authentication, real-time comments, reactions, admin dashboard, and beautiful theming.<br>
   By Vansh Agrawal.</b><br>
   <a href="https://nodejs.org/">Node.js</a> • <a href="https://nextjs.org/">Next.js 14</a> • <a href="https://www.prisma.io/">Prisma</a> • <a href="https://www.fastify.io/">Fastify</a> • <a href="https://tailwindcss.com/">Tailwind</a>
-## Deploy to Vercel
 
-Click the button below to deploy the frontend instantly to Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/VanshAgrawal52/ChronicleX-BloggingPlatform&project-name=chroniclex-bloggingplatform&repository-name=ChronicleX-BloggingPlatform)
-
-**Setup:**
-- Set the root directory to `packages/frontend` in Vercel settings.
-- Set the environment variable `NEXT_PUBLIC_API_URL` to your backend API URL.
-- Deploy!
-
-> The backend (Fastify/Prisma) should be deployed separately (Railway, Render, Fly.io, VPS, etc). Set up your database and environment variables as described below.
-</p>
 
 <p align="center">
   <a href="#features">Features</a> • <a href="#quick-start">Quick Start</a> • <a href="#admin-access">Admin Access</a> • <a href="#production">Production</a> • <a href="#security">Security</a>
